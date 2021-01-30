@@ -27,6 +27,6 @@ import javax.validation.constraints.NotBlank;
  */
 @Client("/")
 public interface HelloClient {
-    @Get("/hello/{name}")
+    @Get(value = "/hello/{name}", produces = "text/plain")
     Single<String> hello(@NotBlank String name);
 }

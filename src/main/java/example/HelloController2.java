@@ -30,12 +30,12 @@ import javax.validation.constraints.NotBlank;
  */
 @Controller("/")
 @Validated
-public class HelloController {
+public class HelloController2 {
 
     @Inject
     ExampleService exampleService;
 
-    @Get(uri = "/hello/{name}", produces = {MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON}, consumes = {MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON})
+    @Get(uri = "/hello2/{name}", produces = {MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON}, consumes = {MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON})
     public Single<String> hello(@NotBlank String name) {
         return Single.just("Hello " + name + "!");
     }
