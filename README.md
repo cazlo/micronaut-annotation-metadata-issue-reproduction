@@ -7,7 +7,11 @@ I added on a few services, injected dynamodb stuff, added on some lombok stuff t
 
 The combination we have here seems to be the minimum reproduction necessary for this issue, although I haven't done a huge amount of testing here to nail it down more specifically.
 
+I was unable to reproduce the issue when removing the factory.
+
 ## demonstrating non-deterministic BeanDefinitionReference generation
+
+*NOTE: due to the non-deterministic nature of this issue you may need to run this a few times!*
 
 ```shell
 ./gradlew clean build && cp build/libs/example-0.1-all.jar firstRun.jar  
